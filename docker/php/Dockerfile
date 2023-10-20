@@ -22,3 +22,5 @@ WORKDIR /var/www
 
 # Laravel Package install
 RUN composer global require "laravel/installer"
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
