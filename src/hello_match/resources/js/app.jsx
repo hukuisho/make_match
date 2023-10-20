@@ -1,9 +1,13 @@
 import "./bootstrap";
-
+// import "./components/Route.jsx";
 import ReactDOM from "react-dom/client";
 
 function App() {
-    return <h1>Hello World</h1>;
+    return (
+        <>
+            <p>aaa</p>
+        </>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("app"));
