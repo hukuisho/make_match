@@ -6,7 +6,11 @@ export default defineConfig({
     plugins: [
         react(),
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.jsx"],
+            input: [
+                "resources/scss/app.scss",
+                "resources/scss/header.scss",
+                "resources/js/app.jsx",
+            ],
             refresh: true,
         }),
     ],

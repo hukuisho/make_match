@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Laravel Vite Vue.js 3</title>
-    @viteReactRefresh @vite(['resources/css/app.css', 'resources/js/app.jsx'])
+    @viteReactRefresh @vite(['resources/scss/app.scss', 'resources/js/app.jsx'])
   </head>
   <body>
     <div id="app"></div>
