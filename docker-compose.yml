@@ -12,7 +12,7 @@ services:
       TZ: "Asia/Tokyo"
     # ポートフォワードの指定（ホスト側ポート：コンテナ側ポート）
     ports:
-      - 3306:3306
+      - 3310:3310
     # コマンドの指定
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     # 名前付きボリュームを設定する（名前付きボリューム:コンテナ側ボリュームの場所）
@@ -33,7 +33,7 @@ services:
     container_name: "nginx_test"
     # ポートフォワードの指定（ホスト側ポート：コンテナ側ポート）
     ports:
-      - 80:80
+      - 80:81
     # ボリュームを設定する（ホスト側ディレクトリ:コンテナ側ボリュームの場所）
     volumes:
       - ./src:/var/www

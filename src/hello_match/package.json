@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite --8080:80",
+        "dev": "vite --8080:81",
         "build": "vite build"
     },
     "devDependencies": {
