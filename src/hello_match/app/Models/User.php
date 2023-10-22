@@ -43,6 +43,26 @@ class User extends Authenticatable
     ];
 
     public function calendar() {
-        return $this->hasMany('Models/Calendar');
+        return $this->hasMany('app/Models/Calendar');
+    }
+    
+    public function follow() {
+        return $this->hasMany('app/Models/Follow');
+    }
+    
+    public function genre() {
+        return $this->hasMany('app/Models/Generet');
+    }
+    
+    public function footprint() {
+        return $this->hasMany('app/Models/Footprint');
+    }
+    
+    public function chat() {
+        return $this->hasMany('app/Models/Chat');
+    }
+    
+    public function post() {
+        return $this->hasMany('app/Models/Post');
     }
 }
