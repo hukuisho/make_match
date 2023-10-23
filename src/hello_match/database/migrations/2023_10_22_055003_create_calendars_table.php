@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('title',20)->comment('タイトル');
+            $table->dateTime('event_date',20)->comment('予定日');
+            $table->text('summary',20)->->comment('詳細');
+            $table->integer('pair_user_id')->nullable();
             $table->timestamps();
         });
     }

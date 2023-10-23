@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')
-            $table->string('title',20);
-            $table->text('title',500);
+            $table->string('title',20)->comment('タイトル');
+            $table->text('summary',500)->comment('詳細');
+            $table->string('img',255)->nullable()->comment('画像');
+            $table->integer('favorite_count')->comment('いいねの数');
             $table->timestamps();
         });
     }
