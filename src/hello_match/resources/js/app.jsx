@@ -6,18 +6,23 @@ import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
 
 const App = () => {
+    const links = [
+        { to: "/user", text: "User" },
+        { to: "/calendar", text: "Calendar" },
+        // 追加のリンク情報をここに追加する
+    ];
+
     return (
         <BrowserRouter>
             <div className="container">
                 <Header />
                 <nav>
                     <ul>
-                        <li>
-                            <Link to="/user">User</Link>
-                        </li>
-                        <li>
-                            <Link to="/calendar">Calendar</Link>
-                        </li>
+                        {links.map((link) => (
+                            <li key={link.to}>
+                                <Link to={link.to}>{link.text}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 <Routes>
