@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./Routes";
+import "./Const";
 import Header from "./components/Header";
 import Navigation from "./components/navigation";
 import UserIndex from "./components/user/Index";
