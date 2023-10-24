@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Navigation from "./components/navigation";
 import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
+import ChatIndex from "./components/chat/Index";
+import PostIndex from "./components/post/Index";
 
 const App = () => {
     const [isNavigationDisplayFlag, setNavigationDisplayFlag] = useState(false);
@@ -21,7 +23,8 @@ const App = () => {
                     <Route path="/" />
                     <Route path="/user" element={<UserIndex />} />
                     <Route path="/calendar" element={<CalendarIndex />} />
-                    {/* 追加のルート情報をここに追加する */}
+                    <Route path="/chat" element={<ChatIndex />} />
+                    <Route path="/post" element={<PostIndex />} />
                 </Routes>
                 {isNavigationDisplayFlag && <Navigation />}
             </BrowserRouter>

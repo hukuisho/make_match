@@ -5,6 +5,8 @@ const Navigation = () => {
         { to: "/", text: "App" },
         { to: "/user", text: "User" },
         { to: "/calendar", text: "Calendar" },
+        { to: "/chat", text: "Chat" },
+        { to: "/post", text: "Post" },
         // 追加のリンク情報をここに追加する
     ];
     return (
