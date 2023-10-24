@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Navigation from "./components/IndexNavigation";
 import UserIndex from "./components/user/Index";
@@ -12,7 +12,9 @@ const App = () => {
     const [isNavigationDisplayFlag, setNavigationDisplayFlag] = useState(false);
 
     const handleNavigationClick = () => {
-        setNavigationDisplayFlag(!isNavigationDisplayFlag);
+        setTimeout(() => {
+            setNavigationDisplayFlag(!isNavigationDisplayFlag);
+        }, 150);
     };
 
     return (
