@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-const navigation = () => {
+import { Routes } from "../Routes";
+const Navigation = () => {
     const links = [
+        { to: "/", text: "App" },
         { to: "/user", text: "User" },
         { to: "/calendar", text: "Calendar" },
         // 追加のリンク情報をここに追加する
     ];
-
     return (
         <nav className="navigation">
             <ul className="navigation__links">
@@ -19,4 +20,4 @@ const navigation = () => {
     );
 };
 
-export default navigation;
+export default Navigation;

@@ -1,11 +1,7 @@
-import { Link } from "react-router-dom";
-
-const Header = () => {
+const Header = ({ onClick }) => {
     return (
-        <div className="header">
-            <Link to="/" className="header__title">
-                <p className="header__title__text">HelloMatch</p>
-            </Link>
+        <div className="header" onClick={onClick}>
+            <p className="header__title__text">HelloMatch</p>
         </div>
     );
 };
