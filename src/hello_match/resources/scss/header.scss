@@ -8,9 +8,9 @@
     align-items: center;
     transition: all 1.5s;
     box-shadow: 0 0 20px #333;
-    background: linear-gradient(45deg, #ffa500ed, #dc381a);
+    background: linear-gradient(45deg, #66797b, #7daada);
     &:hover {
-        background: linear-gradient(45deg, #dc381a, #ffa500ed);
+        background: linear-gradient(45deg, #81a8ad, #ffa500ed);
     }
     &__title {
         width: 75%;
@@ -52,6 +52,7 @@
         cursor: pointer;
         align-items: center;
         justify-content: center;
-        background-color: #8c8585;
+        color: #ffffff;
+        background-color: #575353;
     }
 }
