@@ -7,16 +7,17 @@ import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
 
 const App = () => {
-    const [isNavigationVisible, setNavigationVisible] = useState(false);
+    const [navigationStatusFlag, navigationDisplayStatusFlagCange] =
+        useState(false);
 
-    const handleHeaderClick = () => {
-        setNavigationVisible(!isNavigationVisible);
+    const onClickHeader = () => {
+        navigationDisplayStatusFlagCange(!navigationStatusFlag);
     };
 
     return (
         <div className="container">
             <BrowserRouter>
-                <Header onClick={handleHeaderClick} />
+                <Header onClickHeader={onClickHeader} />
                 <Routes>
                     <Route path="/" />
                     <Route path="/user" element={<UserIndex />} />
