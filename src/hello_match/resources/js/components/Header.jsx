@@ -1,7 +1,12 @@
-const Header = ({ handleHeaderClick }) => {
+const Header = ({ handleNavigationClick }) => {
     return (
-        <div className="header" onClick={handleHeaderClick}>
-            <p className="header__title__text">HelloMatch</p>
+        <div className="header">
+            <a href="/" className="header__title">
+                <b className="header__title__text">HelloMatch</b>
+            </a>
+            <div className="header__navi" onClick={handleNavigationClick}>
+                <b>Navi</b>
+            </div>
         </div>
     );
 };

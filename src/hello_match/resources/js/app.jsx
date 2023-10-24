@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { useState } from "react";
 import Header from "./components/Header";
-import Navigation from "./components/navigation";
+import Navigation from "./components/IndexNavigation";
 import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
 import ChatIndex from "./components/chat/Index";
@@ -11,14 +11,14 @@ import PostIndex from "./components/post/Index";
 const App = () => {
     const [isNavigationDisplayFlag, setNavigationDisplayFlag] = useState(false);
 
-    const handleHeaderClick = () => {
+    const handleNavigationClick = () => {
         setNavigationDisplayFlag(!isNavigationDisplayFlag);
     };
 
     return (
         <div className="container">
             <BrowserRouter>
-                <Header handleHeaderClick={handleHeaderClick} />
+                <Header handleNavigationClick={handleNavigationClick} />
                 <Routes>
                     <Route path="/" />
                     <Route path="/user" element={<UserIndex />} />
