@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 
 import Header from "./components/Header";
+import Navigation from "./components/navigation";
 import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
 
@@ -13,24 +14,60 @@ const App = () => {
     ];
 
     return (
-        <BrowserRouter>
-            <div className="container">
+        <div className="container">
+            <BrowserRouter>
                 <Header />
-                <nav>
-                    <ul>
-                        {links.map((link) => (
-                            <li key={link.to}>
-                                <Link to={link.to}>{link.text}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
                 <Routes>
                     <Route path="/user" element={<UserIndex />} />
                     <Route path="/calendar" element={<CalendarIndex />} />
+                    {/* 追加のルート情報をここに追加する */}
                 </Routes>
-            </div>
-        </BrowserRouter>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <Navigation />
+            </BrowserRouter>
+        </div>
     );
 };
 

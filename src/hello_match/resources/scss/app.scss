@@ -1,9 +1,12 @@
 @use "header";
+@use "navigation";
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 .container {
+    padding: 80px 0;
     width: 100%;
     overflow: hidden;
     min-height: 100vh;
