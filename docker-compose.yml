@@ -17,10 +17,7 @@ services:
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     # 名前付きボリュームを設定する（名前付きボリューム:コンテナ側ボリュームの場所）
     volumes:
-      - db_data_test:/var/lib/mysql
-      - db_my.cnf_test:/etc/mysql/conf.d/my.cnf
-      - db_sql_test:/docker-entrypoint-initdb.d
-
+      - ./data:/path/to/sqlite/file
   php:
     build: ./docker/php
     container_name: "php-fpm"
