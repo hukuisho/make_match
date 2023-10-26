@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCalendarsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('calendars', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('title',20)->comment('タイトル');
-            $table->dateTime('event_date',20)->comment('予定日');
-            $table->text('summary',20)->->comment('詳細');
-            $table->integer('pair_user_id')->nullable();
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->nullable(false);
+            $table->bigInteger('pair_user_id')->nullable();
+            $table->string('title');
+            $table->dateTime('date')->nullable(false);
+            $table->text('summary');
             $table->timestamps();
         });
     }
@@ -33,4 +33,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('calendars');
     }
-};
+}

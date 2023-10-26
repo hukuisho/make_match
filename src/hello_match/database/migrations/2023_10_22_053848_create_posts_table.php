@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users')
-            $table->string('title',20)->comment('タイトル');
-            $table->text('summary',500)->comment('詳細');
-            $table->string('img',255)->nullable()->comment('画像');
-            $table->integer('favorite_count')->comment('いいねの数');
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->nullable(false);
+            $table->string('title')->nullable(false);
+            $table->text('summary')->nullable(false);
+            $table->string('img')->nullable();
+            $table->bigInteger('favorite_count')->nullable(false);
             $table->timestamps();
         });
     }
@@ -33,4 +33,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('posts');
     }
-};
+}
