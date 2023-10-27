@@ -10,7 +10,18 @@ import PostIndex from "./components/post/Index";
 
 const App = () => {
     const [isNavigationDisplayFlag, setNavigationDisplayFlag] = useState(false);
+    const [calendarData, setCalendarData] = useState([]);
 
+    useEffect(() => {
+        fetch("/calendar")
+            .then((response) => response.json())
+            .then((data) => {
+                setCalendarData(data);
+            })
+            .catch((error) => {
+                console.error("データを取得できませんでした:", error);
+            });
+    }, []);
     const handleNavigationClick = () => {
         setTimeout(() => {
             setNavigationDisplayFlag(!isNavigationDisplayFlag);
@@ -24,7 +35,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" />
                     <Route path="/user" element={<UserIndex />} />
-                    <Route path="/calendar" element={<CalendarIndex />} />
+                    <Route
+                        path="/calendar"
+                        element={<CalendarIndex calendarData={calendarData} />}
+                    />
                     <Route path="/chat" element={<ChatIndex />} />
                     <Route path="/post" element={<PostIndex />} />
                 </Routes>

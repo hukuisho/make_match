@@ -14,12 +14,8 @@ use App\Http\Controllers\CalendarController;
 |
 */
 
+
+Route::get('/calendar', [CalendarController::class, 'index']);
 Route::get('{any}', function () {
   return view('app');
 })->where('any','.*');
-// Route::get('/', function() {
-//   return view('app');
-// });
-// Route::get('/calendars', function() {
-//   return view('calendar/index');
-// });

@@ -4,16 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class CalendarController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        // return view('calendars/');
+        $calendarData = [
+            [
+                'id' => 1,
+                'title' => 'イベント1',
+                'date' => '2022-01-01',
+            ],
+            [
+                'id' => 2,
+                'title' => 'イベント2',
+                'date' => '2022-01-02',
+            ],
+        ];
+    
+        return response()->json($calendarData);
     }
 
     /**
