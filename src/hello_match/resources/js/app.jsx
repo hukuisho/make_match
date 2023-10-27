@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import Header from "./components/Header";
 import Navigation from "./components/IndexNavigation";
 import UserIndex from "./components/user/Index";
@@ -13,15 +14,15 @@ const App = () => {
     const [calendarData, setCalendarData] = useState([]);
 
     useEffect(() => {
-        fetch("/calendar")
-            .then((response) => response.json())
-            .then((data) => {
-                setCalendarData(data);
-            })
+        axios
+            .get("/calendar")
+            .then((response) => setCalendarData(response.data))
             .catch((error) => {
                 console.error("データを取得できませんでした:", error);
+                setTimeout(() => (location.href = "/"), 1000);
             });
     }, []);
+
     const handleNavigationClick = () => {
         setTimeout(() => {
             setNavigationDisplayFlag(!isNavigationDisplayFlag);
