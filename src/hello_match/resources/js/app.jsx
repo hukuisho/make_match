@@ -9,6 +9,7 @@ import CalendarIndex from "./components/calendar/Index";
 import ChatIndex from "./components/chat/Index";
 import PostIndex from "./components/post/Index";
 import Login from "./components/certification/login";
+import SignUp from "./components/certification/sign_up";
 
 const App = () => {
     const [isLoggedFlag, setIsLoggedFlag] = useState(false);
@@ -83,6 +84,7 @@ const App = () => {
                     <Header handleNavigationClick={handleNavigationClick} />
                     <Routes>
                         <Route path="/" element={<Login />} />
+                        <Route path="/sign_up" element={<SignUp />} />
                     </Routes>
 
                     {isNavigationDisplayFlag && (

@@ -12,7 +12,8 @@ const Navigation = ({ isLoggedFlag }) => {
         ];
     } else {
         var links = [
-            { to: "/", text: "App" },
+            { to: "/", text: "Login" },
+            { to: "/sign_up", text: "SignUp" },
             // 追加のリンク情報をここに追加する
         ];
     }
