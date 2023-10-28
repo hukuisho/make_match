@@ -5,7 +5,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Navigation from "./components/IndexNavigation";
 import UserIndex from "./components/user/Index";
-import CalendarIndex from "./components/calendar/Index";
+import CalendarIndex from "./components/calendar/index";
 import ChatIndex from "./components/chat/Index";
 import PostIndex from "./components/post/Index";
 import Login from "./components/certification/login";
@@ -14,7 +14,7 @@ import SignUp from "./components/certification/sign_up";
 const App = () => {
     const [isLoggedFlag, setIsLoggedFlag] = useState(false);
     const [isNavigationDisplayFlag, setNavigationDisplayFlag] = useState(false);
-    const [calendarData, setCalendarData] = useState([]);
+    const [userCarendarData, setuserCarendarData] = useState([]);
 
     useEffect(() => {
         const checkLoginStatus = () => {
@@ -44,7 +44,7 @@ const App = () => {
         }
         axios
             .get("/calendar")
-            .then((response) => setCalendarData(response.data))
+            .then((response) => setuserCarendarData(response.data))
             .catch((error) => {
                 console.error("データを取得できませんでした:", error);
                 setTimeout(() => (location.href = "/"), 1000);
@@ -67,7 +67,7 @@ const App = () => {
                         <Route
                             path="/calendar"
                             element={
-                                <CalendarIndex calendarData={calendarData} />
+                                <CalendarIndex userCarendarData={userCarendarData} />
                             }
                         />
                         <Route path="/chat" element={<ChatIndex />} />
@@ -89,7 +89,7 @@ const App = () => {
                         <Route
                             path="/calendar"
                             element={
-                                <CalendarIndex calendarData={calendarData} />
+                                <CalendarIndex userCarendarData={userCarendarData} />
                             }
                         />
                     </Routes>
