@@ -9,20 +9,49 @@ class CalendarController extends Controller
 {
     public function index()
     {
-        $calendarData = [
-            [
-                'id' => 1,
-                'title' => 'イベント1',
-                'date' => '2022-01-01',
-            ],
-            [
-                'id' => 2,
-                'title' => 'イベント2',
-                'date' => '2022-01-02',
-            ],
-        ];
+        // $selectDay = filter_input(INPUT_POST, 'selectDay');
+        // $yearNext = filter_input(INPUT_POST, 'yearNext');
+        // $monthPrev = filter_input(INPUT_POST, 'monthPrev');
+        // $yearPrev = filter_input(INPUT_POST, 'yearPrev');
+
+        
+
+        $userCarendarData = ["today"=> date("Y-m-d H:i:s")];
+
+        return response()->json($userCarendarData);
+
+        
+
+        // $userCarendarData = [
+        //     [
+        //         'id' => 1,
+        //         'title' => 'イベント1',
+        //         'date' => '2022-01-01',
+        //     ],
+        //     [
+        //         'id' => 2,
+        //         'title' => 'イベント2',
+        //         'date' => '2022-01-02',
+        //     ],
+        // ];
     
-        return response()->json($calendarData);
+        // return response()->json($userCarendarData);
+
+        function calendar(){
+            $today = date('Y-m-d');
+
+            $nextMonthFlg(true) {
+                $currentMonth = date('m');
+                $currentMonth++;
+            } 
+
+            if($currentMonth = '12'){
+                $currentYear = date('Y');
+                $currentYear++;
+                $currentMonth = '1';
+            }
+        }
+
     }
 
     /**
