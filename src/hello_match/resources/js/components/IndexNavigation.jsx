@@ -14,6 +14,10 @@ const Navigation = ({ isLoggedFlag }) => {
         var links = [
             { to: "/", text: "Login" },
             { to: "/sign_up", text: "SignUp" },
+            { to: "/calendar", text: "Calendar" },
+            {
+                /* ↑ここログイン機能ができたら削除　*/
+            },
             // 追加のリンク情報をここに追加する
         ];
     }

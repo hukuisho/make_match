@@ -85,6 +85,8 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Login />} />
                         <Route path="/sign_up" element={<SignUp />} />
+                        {/* ↓ログイン機能ができたら削除　*/}
+                        <Route path="/sign_up" element={<SignUp />} />
                     </Routes>
 
                     {isNavigationDisplayFlag && (
