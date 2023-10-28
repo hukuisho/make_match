@@ -47,7 +47,7 @@ const App = () => {
             .then((response) => setuserCarendarData(response.data))
             .catch((error) => {
                 console.error("データを取得できませんでした:", error);
-                setTimeout(() => (location.href = "/"), 1000);
+                // setTimeout(() => (location.href = "/"), 1000);
             });
     }, []);
 
@@ -67,7 +67,9 @@ const App = () => {
                         <Route
                             path="/calendar"
                             element={
-                                <CalendarIndex userCarendarData={userCarendarData} />
+                                <CalendarIndex
+                                    userCarendarData={userCarendarData}
+                                />
                             }
                         />
                         <Route path="/chat" element={<ChatIndex />} />
@@ -89,7 +91,9 @@ const App = () => {
                         <Route
                             path="/calendar"
                             element={
-                                <CalendarIndex userCarendarData={userCarendarData} />
+                                <CalendarIndex
+                                    userCarendarData={userCarendarData}
+                                />
                             }
                         />
                     </Routes>

@@ -37,23 +37,23 @@ class CalendarController extends Controller
     
         // return response()->json($userCarendarData);
 
-        function calendar(){
-            $today = date('Y-m-d');
-
-            $nextMonthFlg(true) {
-                $currentMonth = date('m');
-                $currentMonth++;
-            } 
-
-            if($currentMonth = '12'){
-                $currentYear = date('Y');
-                $currentYear++;
-                $currentMonth = '1';
-            }
-        }
-
+        // }
+        
     }
+    // function calendar(){
+    //     $today = date('Y-m-d');
 
+    //     $nextMonthFlg(true) {
+    //         $currentMonth = date('m');
+    //         $currentMonth++;
+    //     } 
+
+    //     if($currentMonth = '12'){
+    //         $currentYear = date('Y');
+    //         $currentYear++;
+    //         $currentMonth = '1';
+    //     }
+    // }
     /**
      * Show the form for creating a new resource.
      *
