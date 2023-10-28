@@ -8,6 +8,7 @@ import UserIndex from "./components/user/Index";
 import CalendarIndex from "./components/calendar/Index";
 import ChatIndex from "./components/chat/Index";
 import PostIndex from "./components/post/Index";
+import Login from "./components/certification/login";
 
 const App = () => {
     const [isLoggedFlag, setIsLoggedFlag] = useState(false);
@@ -80,8 +81,13 @@ const App = () => {
             <div className="container">
                 <BrowserRouter>
                     <Header handleNavigationClick={handleNavigationClick} />
-                    <p>ログインしてないっす</p>
-                    {isNavigationDisplayFlag && <Navigation />}
+                    <Routes>
+                        <Route path="/" element={<Login />} />
+                    </Routes>
+
+                    {isNavigationDisplayFlag && (
+                        <Navigation isLoggedFlag={isLoggedFlag} />
+                    )}
                 </BrowserRouter>
             </div>
         );
