@@ -16,6 +16,7 @@
         "vite": "^4.5.0"
     },
     "dependencies": {
+        "react-datepicker": "^4.21.0",
         "react-router-dom": "^6.17.0"
     }
 }
