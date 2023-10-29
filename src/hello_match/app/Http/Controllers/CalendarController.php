@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Calendar; 
 
 
 class CalendarController extends Controller
@@ -13,6 +14,7 @@ class CalendarController extends Controller
         // $yearNext = filter_input(INPUT_POST, 'yearNext');
         // $monthPrev = filter_input(INPUT_POST, 'monthPrev');
         // $yearPrev = filter_input(INPUT_POST, 'yearPrev');
+        $schedule = Calendar::all();
 
         
 

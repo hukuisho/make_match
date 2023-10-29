@@ -1,0 +1,73 @@
+.calendar{
+    width:80%;
+    margin: 0 auto;
+    li{
+        list-style-type: none;
+        font-size: 1em;
+    }  
+}
+
+.calendar-header{
+    width: 80%;
+    display:flex;
+    justify-content: space-between;
+    margin:10px auto 1em auto;
+    h1{
+        font-size: 2em;
+    }
+    .calendar-nav{
+        display:flex;
+        justify-content: end;
+        font-size:1.5em;
+        button{
+            border:none;
+            background-color: transparent;
+            margin-left: 1em;
+        }
+    }
+}
+
+.clender-table{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    thead{
+        text-align: center;
+        th{
+            border:1px solid silver;
+        }
+    }
+    tbody tr{
+        td:hover{
+            background-color: silver;
+        }
+        td{
+            border: 1px solid silver;
+            padding: 0.3em 0.3em 1em 0.3em;
+            width: calc(100%/7);
+            .nschedule-date{
+                text-align: right;
+                font-size: 0.8em;
+                color:silver;
+            }
+            .nchedule-date{
+                text-align: right;
+                font-size: 0.8em;
+            }
+            .schedule-area{
+                height: 5em;
+                .schedule-title{
+                    color: #fff;
+                    background-color: #3788d8;
+                    font-size: 0.8em;
+                    border-radius: 3px;
+                    padding-left: 0.2em;
+                    margin-bottom: 0.2em;
+                }
+            }
+        }
+        td.today{
+            background-color: #f1efd6;
+        }
+    }
+}

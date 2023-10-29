@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import axios from "axios";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // import { Month } from "./components/calendar/Month";
+import Example from "./example";
 
 const CalendarIndex = ({ userCarendarData }) => {
     // userCarendarDataを使用して表示する処理を記述
@@ -14,12 +15,9 @@ const CalendarIndex = ({ userCarendarData }) => {
             <div>
                 <p>{userCarendarData["today"]}</p>
             </div>
+            <Example />
 
             <div>
-                
-                
-
-
                 <form action="index" method="post">
                     <button type="submit" id="today"> 現在に戻る
                         <input type="hidden" name="today" value="getToday" />
